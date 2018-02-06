@@ -21,6 +21,13 @@
     </ng-template>
 </p-table>
 
+<p-dataTable>
+    <p-column field="title" header="HOLA"></p-column>
+    <p-column field="year" header="Year"></p-column>
+</p-dataTable>
+
+
+
 <p-dialog header="Car Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" [closable]="true" [width]="300">
     <div class="ui-g ui-fluid" *ngIf="car">
         <div class="ui-g-4"><label for="vin">Vin</label></div>
