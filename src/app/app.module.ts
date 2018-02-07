@@ -7,13 +7,13 @@ import { InputTextModule }  from 'primeng/inputtext';
 import { ButtonModule }  from 'primeng/button';
 import { TableModule }  from 'primeng/table';
 import { DialogModule }  from 'primeng/dialog';
-
-import { AppComponent } from './app.component';
 import {DataTableModule} from "primeng/primeng";
+import { FilmsService } from './services/films.service';
+import { FilmsComponent } from './films/films.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        FilmsComponent
     ],
     imports: [
         BrowserModule,
@@ -26,7 +26,7 @@ import {DataTableModule} from "primeng/primeng";
         ButtonModule,
         DataTableModule
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    providers: [FilmsService],
+    bootstrap: [FilmsComponent]
 })
 export class AppModule { }
