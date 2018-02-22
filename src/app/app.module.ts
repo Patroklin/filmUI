@@ -7,13 +7,22 @@ import { InputTextModule }  from 'primeng/inputtext';
 import { ButtonModule }  from 'primeng/button';
 import { TableModule }  from 'primeng/table';
 import { DialogModule }  from 'primeng/dialog';
-import {DataTableModule} from "primeng/primeng";
+import {DataTableModule, SlideMenuModule} from "primeng/primeng";
 import { FilmsService } from './services/films.service';
 import { FilmsComponent } from './films/films.component';
+import {SlideMenu} from "./controller/slide-menu";
+import { FilmFormComponent } from './film-form/film-form.component';
+import { FilmRoutingModule } from './app-routing/app-routing.module';
+import { MainComponent } from './main/main.component';
+import { UsersComponent } from './users/users/users.component';
+import {UsersService} from "./services/users.service";
 
 @NgModule({
     declarations: [
-        FilmsComponent
+        FilmsComponent,
+        FilmFormComponent,
+        MainComponent,
+        UsersComponent
     ],
     imports: [
         BrowserModule,
@@ -24,9 +33,11 @@ import { FilmsComponent } from './films/films.component';
         InputTextModule,
         DialogModule,
         ButtonModule,
-        DataTableModule
+        DataTableModule,
+        SlideMenuModule,
+        FilmRoutingModule
     ],
-    providers: [FilmsService],
-    bootstrap: [FilmsComponent]
+    providers: [FilmsService, SlideMenu, UsersService],
+    bootstrap: [MainComponent]
 })
 export class AppModule { }

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/theme/blue-oval-theme.scss";
+@import "assets/css/styles.css";
+
+.mainContainer{
+    display: table;
+}
+
+.menuContainer{
+    display: table-cell;
+    display: inline-block;
+    width: 20%;
+}
+
+.itemsContainer{
+    display: table-cell;
+    width: 800%;
+    vertical-align: top;
+}
+
+.ui-menu-list	{
+    color: beige;
+}
